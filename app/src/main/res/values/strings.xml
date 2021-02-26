@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">COVID-19</string>
+    <string name="infected_string">infected:&#160;</string>
+    <string name="deceased_string">deceased:&#160;</string>
+    <string name="recovered_string">recovered:&#160;</string>
+    <string name="active_case_string">active case:&#160;</string>
+    <string name="daily_quarantine_string">Quarantine:&#160;</string>
+    <string name="lasted_updated_string">lasted updated:&#160;</string>
 </resources>
