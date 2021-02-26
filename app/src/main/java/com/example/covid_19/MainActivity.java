@@ -71,7 +71,7 @@ public class MainActivity extends AppCompatActivity {
 
         letsDoSomeNetworkingPoland(BASE_URL_POLAND);
 
-        // TODO: POLAND LINEAR LAYOUT CLICKED
+        // POLAND LINEAR LAYOUT CLICKED
         mPolandLinearLayout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
