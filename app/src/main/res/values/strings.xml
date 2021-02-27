@@ -6,4 +6,9 @@
     <string name="active_case_string">active case:&#160;</string>
     <string name="daily_quarantine_string">Quarantine:&#160;</string>
     <string name="lasted_updated_string">lasted updated:&#160;</string>
+    <string name="new_confirmed_string">new confirmed:&#160;</string>
+    <string name="confirmed_string">confirmed:&#160;</string>
+    <string name="new_deaths_string">new deaths:&#160;</string>
+    <string name="deaths_string">deaths:&#160;</string>
+    <string name="new_recovered_string">new recovered:&#160;</string>
 </resources>
