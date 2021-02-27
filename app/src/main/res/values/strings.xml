@@ -11,4 +11,8 @@
     <string name="new_deaths_string">new deaths:&#160;</string>
     <string name="deaths_string">deaths:&#160;</string>
     <string name="new_recovered_string">new recovered:&#160;</string>
+    <string name="tested_string">tested:&#160;</string>
+    <string name="quarantine_string">quarantine:&#160;</string>
+    <string name="tested_pos_string">testedPos:&#160;</string>
+    <string name="tested_neg_string">testedNeg:&#160;</string>
 </resources>

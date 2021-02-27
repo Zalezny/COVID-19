@@ -73,24 +73,55 @@
                     android:src="@drawable/polandflag" />
 
                 <TextView
-                    android:id="@+id/infectedPoland"
+                    android:id="@+id/newConfirmedPoland"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="7dp"
-                    android:text="@string/infected_string"
+                    android:text="@string/new_confirmed_string"
                     android:textColor="#FFFFFF"
                     android:textSize="13sp" />
 
                 <TextView
-                    android:id="@+id/deceasedPoland"
+                    android:id="@+id/confirmedPoland"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="7dp"
-                    android:text="@string/deceased_string"
+                    android:text="@string/confirmed_string"
                     android:textColor="#FFFFFF"
                     android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/newDeathsPoland"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/new_deaths_string"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/deathsPoland"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="7dp"
+                    android:text="@string/deaths_string"
+                    android:textColor="#FFFFFF"
+                    android:textSize="13sp" />
+
+
+                <TextView
+                android:id="@+id/newRecoveredPoland"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="7dp"
+                android:text="@string/new_recovered_string"
+                android:textColor="#FFFFFF"
+                android:textSize="13sp" />
 
                 <TextView
                     android:id="@+id/recoveredPoland"
@@ -101,28 +132,6 @@
                     android:text="@string/recovered_string"
                     android:textColor="#FFFFFF"
                     android:textSize="13sp" />
-
-                <TextView
-                    android:id="@+id/activeCasePoland"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="7dp"
-                    android:text="@string/active_case_string"
-                    android:textColor="#FFFFFF"
-                    android:textSize="13sp" />
-
-
-                <TextView
-                    android:id="@+id/dailyQuarantinePoland"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginTop="7dp"
-                    android:text="@string/daily_quarantine_string"
-                    android:textColor="#FFFFFF"
-                    android:textSize="13sp" />
-
 
                 <TextView
                     android:id="@+id/updatePoland"
@@ -163,25 +172,52 @@
                         android:src="@drawable/azerbaijanflag" />
 
                     <TextView
-                        android:id="@+id/infectedAzerbaijan"
+                        android:id="@+id/newConfirmedAzerbaijan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="7dp"
-                        android:text="@string/infected_string"
+                        android:text="@string/new_confirmed_string"
                         android:textColor="#FFFFFF"
                         android:textSize="13sp" />
 
                     <TextView
-                        android:id="@+id/deceasedAzerbaijan"
+                        android:id="@+id/confirmedAzerbaijan"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:layout_marginTop="7dp"
-                        android:text="@string/deceased_string"
+                        android:text="@string/confirmed_string"
                         android:textColor="#FFFFFF"
                         android:textSize="13sp" />
 
+                    <TextView
+                        android:id="@+id/newDeathsAzerbaijan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/new_deaths_string"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:id="@+id/deathsAzerbaijan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/deaths_string"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp" />
+                    <TextView
+                        android:id="@+id/newRecoveredAzerbaijan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/new_recovered_string"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp" />
                     <TextView
                         android:id="@+id/recoveredAzerbaijan"
                         android:layout_width="wrap_content"

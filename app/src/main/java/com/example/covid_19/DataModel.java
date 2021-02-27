@@ -24,7 +24,12 @@ public class DataModel extends MainActivity {
 
     String CountryName;
 
-    String[] countriestab = new String[190];
+    String[] countriestab = new String[190]; // StringTab of Countries
+
+
+    // JSON FROM DOCUMENTER.GETPOSTMAN.COM :: link API: https://api.covid19api.com/live/country/summary
+
+
 
     public void letsDoSomeNetworkingPOSTMAN(String url)  {
 
@@ -42,31 +47,61 @@ public class DataModel extends MainActivity {
                     for (int i = 0; i<190;i++)
                         Log.d("Tab", "Tab names: " + countriestab[i]);
 
-                    for (int i = 0; i<190;i++)
-                    if (countriestab[i].equals(CountryName)) { //countriestab[i] == CountryName
-                        String newConfirmedfromJSON = response.getJSONArray("Countries").getJSONObject(i).getString("NewConfirmed");
-                        String newConfirmed = mNewConfirmedCountry.getText() + newConfirmedfromJSON;
-                        mNewConfirmedCountry.setText(newConfirmed);
+                    for (int i = 0; i<190;i++) {
+                        if (countriestab[i].equals(CountryName) &&
+                                response.getJSONArray("Countries").getJSONObject(i).getInt("NewConfirmed") != 0 &&
+                                response.getJSONArray("Countries").getJSONObject(i).getInt("NewDeaths") != 0 &&
+                                response.getJSONArray("Countries").getJSONObject(i).getInt("NewRecovered") != 0) { //countriestab[i] == CountryName
+                            String newConfirmedfromJSON = response.getJSONArray("Countries").getJSONObject(i).getString("NewConfirmed");
+                            String newConfirmed = mNewConfirmedCountry.getText() + newConfirmedfromJSON;
+                            mNewConfirmedCountry.setText(newConfirmed);
 
-                        String ConfirmedfromJSON = response.getJSONArray("Countries").getJSONObject(i).getString("TotalConfirmed");
-                        String Confirmed = mConfirmedCountry.getText() + ConfirmedfromJSON;
-                        mConfirmedCountry.setText(Confirmed);
+                            String ConfirmedfromJSON = response.getJSONArray("Countries").getJSONObject(i).getString("TotalConfirmed");
+                            String Confirmed = mConfirmedCountry.getText() + ConfirmedfromJSON;
+                            mConfirmedCountry.setText(Confirmed);
 
-                        String newDeathsfromJSON = response.getJSONArray("Countries").getJSONObject(i).getString("NewDeaths");
-                        String newDeaths = mNewDeathsCountry.getText() + newDeathsfromJSON;
-                        mNewDeathsCountry.setText(newDeaths);
+                            String newDeathsfromJSON = response.getJSONArray("Countries").getJSONObject(i).getString("NewDeaths");
+                            String newDeaths = mNewDeathsCountry.getText() + newDeathsfromJSON;
+                            mNewDeathsCountry.setText(newDeaths);
 
-                        String DeathsfromJSON = response.getJSONArray("Countries").getJSONObject(i).getString("TotalDeaths");
-                        String Deaths = mDeathsCountry.getText() + DeathsfromJSON;
-                        mDeathsCountry.setText(Deaths);
+                            String DeathsfromJSON = response.getJSONArray("Countries").getJSONObject(i).getString("TotalDeaths");
+                            String Deaths = mDeathsCountry.getText() + DeathsfromJSON;
+                            mDeathsCountry.setText(Deaths);
 
-                        String NewRecoveredfromJSON = response.getJSONArray("Countries").getJSONObject(i).getString("NewRecovered");
-                        String newRecovered = mNewRecoveredCountry.getText() + NewRecoveredfromJSON;
-                        mNewRecoveredCountry.setText(newRecovered);
+                            String NewRecoveredfromJSON = response.getJSONArray("Countries").getJSONObject(i).getString("NewRecovered");
+                            String newRecovered = mNewRecoveredCountry.getText() + NewRecoveredfromJSON;
+                            mNewRecoveredCountry.setText(newRecovered);
 
-                        String RecoveredfromJSON = response.getJSONArray("Countries").getJSONObject(63).getString("TotalRecovered");
-                        String Recovered = mRecoveredCountry.getText() + RecoveredfromJSON;
-                        mRecoveredCountry.setText(Recovered);
+                            String RecoveredfromJSON = response.getJSONArray("Countries").getJSONObject(63).getString("TotalRecovered");
+                            String Recovered = mRecoveredCountry.getText() + RecoveredfromJSON;
+                            mRecoveredCountry.setText(Recovered);
+                        }
+                        else if (countriestab[i].equals(CountryName) &&
+                                response.getJSONArray("Countries").getJSONObject(i).getInt("NewConfirmed") == 0 &&
+                                response.getJSONArray("Countries").getJSONObject(i).getInt("NewDeaths") == 0 &&
+                                response.getJSONArray("Countries").getJSONObject(i).getInt("NewRecovered") == 0)
+                        {
+                            String newConfirmed = mNewConfirmedCountry.getText() + "NoD";
+                            mNewConfirmedCountry.setText(newConfirmed);
+
+                            String ConfirmedfromJSON = response.getJSONArray("Countries").getJSONObject(i).getString("TotalConfirmed");
+                            String Confirmed = mConfirmedCountry.getText() + ConfirmedfromJSON;
+                            mConfirmedCountry.setText(Confirmed);
+
+                            String newDeaths = mNewDeathsCountry.getText() + "NoD";
+                            mNewDeathsCountry.setText(newDeaths);
+
+                            String DeathsfromJSON = response.getJSONArray("Countries").getJSONObject(i).getString("TotalDeaths");
+                            String Deaths = mDeathsCountry.getText() + DeathsfromJSON;
+                            mDeathsCountry.setText(Deaths);
+
+                            String newRecovered = mNewRecoveredCountry.getText() + "NoD";
+                            mNewRecoveredCountry.setText(newRecovered);
+
+                            String RecoveredfromJSON = response.getJSONArray("Countries").getJSONObject(63).getString("TotalRecovered");
+                            String Recovered = mRecoveredCountry.getText() + RecoveredfromJSON;
+                            mRecoveredCountry.setText(Recovered);
+                        }
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
